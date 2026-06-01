@@ -57,4 +57,3 @@ SRS (Especificación de Requisitos)
 
 Diagramas de Arquitectura y Flujo
 
-Mockups y Diseño
