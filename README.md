@@ -1,59 +1,42 @@
-BrainRush
+# BrainRush
 
-Descripción
+## Descripción
+BrainRush es una aplicación móvil diseñada para el fortalecimiento de la agilidad mental mediante retos interactivos. El problema que resuelve es la falta de herramientas accesibles para el entrenamiento cognitivo diario, ofreciendo a los usuarios una forma rápida y gamificada de medir su desempeño, con persistencia de datos para seguimiento histórico. Su diseño móvil tiene sentido porque permite entrenar en tiempos muertos o periodos cortos durante el día, facilitando la adopción de un hábito saludable.
 
-BrainRush es una aplicación móvil desarrollada para el fortalecimiento de la agilidad mental mediante retos interactivos. El problema que resuelve es la falta de herramientas accesibles para el entrenamiento cognitivo diario, ofreciendo a los usuarios una forma rápida y gamificada de medir su desempeño, con persistencia de datos para seguimiento histórico.
+## Integrantes
+* **Manuel (Manolo):** Desarrollador Líder / Arquitecto de Software / Implementación de Lógica de Juego y Backend.
 
-Integrantes
-Manuel Restrepo Ramirez: Desarrollador Líder / Arquitectura de Software / Implementación de Lógica de Juego.
+## Stack tecnológico
+* **Framework:** Flutter (Android).
+* **Arquitectura:** Patrón de Repositorio (Modular: UI, State, Repository, DataSources).
+* **Persistencia local:** `SharedPreferences`.
+* **Persistencia remota:** Firebase Cloud Firestore.
+* **Auth:** Firebase Authentication.
+* **Crashlytics:** Firebase Crashlytics para observabilidad.
 
-Stack Tecnológico
-Framework: Flutter (Android).
+## Funcionalidades principales
+* **Autenticación:** Gestión segura de inicio y cierre de sesión de usuarios.
+* **Retos de Agilidad:** Flujo de juego dinámico con respuesta inmediata.
+* **Gestión de Historial (CRUD):** Registro, consulta y eliminación de partidas.
+* **Modo Offline:** Persistencia de datos locales para funcionamiento sin conexión.
 
-Arquitectura: Modular basada en estado (UI, Repository, DataSources).
+## Arquitectura
+La aplicación utiliza un **Patrón de Repositorio** que desacopla la interfaz de la lógica de datos, permitiendo que la aplicación sea mantenible y escalable.
+* [Ver documentación de arquitectura detallada](docs/arquitectura.md)
 
-Persistencia Local: SharedPreferences.
+## Cómo ejecutar localmente
+1. **Requisitos:** Tener instalado Flutter SDK (versión 3.x recomendada) y Android Studio.
+2. **Clonación:** `git clone [URL_DE_TU_REPOSITORIO]`.
+3. **Instalación:** Ejecutar `flutter pub get` en la raíz del proyecto.
+4. **Configuración:** Colocar el archivo `google-services.json` (obtenido de Firebase Console) en la carpeta `android/app/`.
+5. **Ejecución:** Conectar un emulador o dispositivo Android y ejecutar `flutter run`.
 
-Persistencia Remota: Firebase Cloud Firestore.
+## Servicios externos
+* **Firebase Auth:** Gestión de identidades y seguridad de acceso.
+* **Cloud Firestore:** Almacenamiento y sincronización de datos de usuario en la nube.
+* **Firebase Crashlytics:** Monitoreo y reporte de fallos en tiempo real para mantenimiento preventivo.
 
-Autenticación: Firebase Auth.
-
-Observabilidad: Firebase Crashlytics.
-
-Funcionalidades principales
-Autenticación: Login seguro y gestión de sesión persistente.
-
-Retos de Agilidad: Flujo de juego dinámico con respuesta inmediata.
-
-Historial CRUD: Registro, consulta y eliminación de partidas.
-
-Modo Offline: Persistencia local para uso sin conexión.
-
-Arquitectura
-La aplicación utiliza un patrón de Repositorio para desacoplar la interfaz de la lógica de datos, facilitando la mantenibilidad y el escalamiento.
-
-Ver documentación de arquitectura detallada
-
-Cómo ejecutar localmente
-Requisitos: Flutter SDK (versión 3.x recomendada).
-
-Clonación: git clone [URL_DE_TU_REPOSITORIO]
-
-Instalación: Ejecutar flutter pub get en la raíz del proyecto.
-
-Configuración: Asegurarse de tener el archivo google-services.json correctamente configurado en la carpeta android/app/.
-
-Ejecución: Conectar un dispositivo móvil o emulador y ejecutar flutter run.
-
-Servicios externos
-Firebase Auth: Gestión de identidades y seguridad de acceso.
-
-Cloud Firestore: Almacenamiento y sincronización de datos de usuario en la nube.
-
-Firebase Crashlytics: Monitoreo y reporte de fallos en tiempo real.
-
-Documentación
-SRS (Especificación de Requisitos)
-
-Diagramas de Arquitectura y Flujo
-
+## Documentación
+* [SRS (Especificación de Requisitos)](docs/SRS.md)
+* [Diagramas de Arquitectura y Flujo](docs/diagramas/)
+* [Registro de uso de IA](docs/uso-ia.md)
